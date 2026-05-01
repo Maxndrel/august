@@ -1,0 +1,422 @@
+@media (max-width: 767px) {
+    nav {
+        display: none;
+    }
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-left {
+        opacity: 0;
+        transform: translateY(-24px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .reveal-left.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .skill-card,
+    .project-card {
+        opacity: 0;
+        transform: scale(0.94);
+        transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skill-card.visible,
+    .project-card.visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .skill-card:nth-child(1),
+    .project-card:nth-child(1) { transition-delay: 0s; }
+    .skill-card:nth-child(2),
+    .project-card:nth-child(2) { transition-delay: 0.1s; }
+    .skill-card:nth-child(3),
+    .project-card:nth-child(3) { transition-delay: 0.2s; }
+    .skill-card:nth-child(4),
+    .project-card:nth-child(4) { transition-delay: 0.3s; }
+
+    .watermark {
+        animation: drift 1s linear both;
+    }
+
+    @supports (animation-timeline: scroll()) {
+        .watermark {
+            animation-timeline: scroll();
+            animation-name: drift;
+        }
+    }
+
+    @keyframes drift {
+        from { transform: translateY(0); }
+        to { transform: translateY(-40px); }
+    }
+
+    .hero-quote,
+    .hero-name,
+    .hero-badge,
+    .hero-tagline,
+    .hero-buttons {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: heroEntrance 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .hero-quote { animation-delay: 0.1s; }
+    .hero-name { animation-delay: 0.2s; }
+    .hero-badge { animation-delay: 0.3s; }
+    .hero-tagline { animation-delay: 0.4s; }
+    .hero-buttons { animation-delay: 0.5s; }
+
+    @keyframes heroEntrance {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .about-photo-card {
+        opacity: 0;
+        transform: translateY(-30px);
+        transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+    }
+
+    .about-photo-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .certifications-grid {
+        perspective: 800px;
+    }
+
+    .cert-card {
+        opacity: 0;
+        transform: rotateX(8deg);
+        transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+    }
+
+    .cert-card.visible {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+
+    .cert-card:nth-child(1) { transition-delay: 0s; }
+    .cert-card:nth-child(2) { transition-delay: 0.08s; }
+    .cert-card:nth-child(3) { transition-delay: 0.16s; }
+    .cert-card:nth-child(4) { transition-delay: 0.24s; }
+    .cert-card:nth-child(5) { transition-delay: 0.32s; }
+    .cert-card:nth-child(6) { transition-delay: 0.40s; }
+
+    .contact-heading h2 .lets {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: 0s;
+    }
+
+    .contact-heading h2 .build {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: 0.12s;
+    }
+
+    .contact-heading h2 .together {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: 0.24s;
+    }
+
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .contact-link {
+        opacity: 0;
+        transform: scale(0.9);
+        animation: scaleIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        animation-delay: 0.4s;
+    }
+
+    @keyframes scaleIn {
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .scroll-indicator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .scroll-indicator.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .scroll-indicator-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, var(--amber), transparent);
+    }
+
+    .scroll-indicator-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--amber);
+        border-radius: 50%;
+        animation: bounce 1.2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(10px); }
+    }
+
+    .hero-bottom {
+        display: none;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-area {
+        width: 280px;
+        height: 340px;
+    }
+
+    .photo-bg {
+        width: 220px;
+        height: 270px;
+    }
+
+    .photo-card {
+        width: 220px;
+        height: 270px;
+    }
+
+    .photo-initials {
+        font-size: 70px;
+    }
+
+    .watermark {
+        left: 20px;
+        font-size: 60px;
+    }
+
+    .side-text {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-grid {
+        gap: 40px;
+    }
+
+    .about-columns {
+        gap: 30px;
+    }
+
+    .projects-grid {
+        gap: 20px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-link {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
+    }
+
+    .status-float {
+        left: 10px;
+        bottom: -10px;
+        padding: 12px 16px;
+    }
+
+    .hero-quote {
+        font-size: 50px;
+    }
+
+    .hero-badge {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(36px, 8vw, 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 50px 18px;
+    }
+
+    nav {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .photo-area {
+        width: 240px;
+        height: 290px;
+    }
+
+    .photo-bg {
+        width: 190px;
+        height: 230px;
+    }
+
+    .photo-card {
+        width: 190px;
+        height: 230px;
+    }
+
+    .photo-initials {
+        font-size: 55px;
+    }
+
+    .hero-name {
+        font-size: clamp(32px, 10vw, 48px);
+    }
+
+    .hero-quote {
+        font-size: 40px;
+    }
+
+    .hero-tagline {
+        font-size: 15px;
+    }
+
+    .about-heading h2 {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+
+    .about-quote {
+        font-size: 40px;
+    }
+
+    .bio-text {
+        font-size: 15px;
+    }
+
+    .skills-heading {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+
+    .skill-card {
+        padding: 30px 18px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(28px, 10vw, 40px);
+    }
+
+    .footer-bar p {
+        font-size: 10px;
+    }
+
+    .timeline-item h4 {
+        font-size: 14px;
+    }
+
+    .column-title {
+        font-size: 16px;
+    }
+
+    .cert-card {
+        padding: 18px;
+    }
+
+    .tools-grid {
+        gap: 8px;
+    }
+
+    .tool-pill {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero-name {
+        font-size: 28px;
+    }
+
+    .photo-area {
+        width: 200px;
+        height: 250px;
+    }
+
+    .photo-bg {
+        width: 160px;
+        height: 200px;
+    }
+
+    .photo-card {
+        width: 160px;
+        height: 200px;
+    }
+
+    .photo-initials {
+        font-size: 45px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 12px;
+    }
+}

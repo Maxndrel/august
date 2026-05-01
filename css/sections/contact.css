@@ -1,0 +1,118 @@
+#contact {
+    background: var(--near-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-label {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.contact-label .line {
+    width: 100px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+}
+
+.contact-label span {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: rgba(255,255,255,0.6);
+}
+
+.watermark-light {
+    color: rgba(255,255,255,0.04);
+}
+
+.side-text-light {
+    color: rgba(255,255,255,0.3);
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-heading h2 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(48px, 10vw, 100px);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.contact-heading h2 .lets {
+    color: var(--white);
+}
+
+.contact-heading h2 .build {
+    color: var(--amber);
+}
+
+.contact-heading h2 .together {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--white);
+}
+
+.contact-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 30px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: var(--amber);
+    color: var(--near-black);
+}
+
+.contact-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-cta .btn {
+    display: inline-block;
+}
+
+.footer-bar {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.footer-bar p {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.4);
+}

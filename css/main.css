@@ -1,0 +1,43 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    background: var(--white);
+    color: var(--near-black);
+    overflow-x: hidden;
+    cursor: none;
+}
+
+section {
+    position: relative;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.6s ease;
+}
+
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.d1 { transition-delay: 0s; }
+.d2 { transition-delay: 0.08s; }
+.d3 { transition-delay: 0.16s; }
+.d4 { transition-delay: 0.24s; }
+.d5 { transition-delay: 0.32s; }
+.d6 { transition-delay: 0.40s; }
+.d7 { transition-delay: 0.48s; }
+.d8 { transition-delay: 0.56s; }

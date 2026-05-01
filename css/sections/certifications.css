@@ -1,0 +1,17 @@
+#certifications {
+    background: var(--light-gray);
+}
+
+.certifications-heading {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(36px, 5vw, 48px);
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

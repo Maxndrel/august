@@ -1,0 +1,40 @@
+.cursor-dot, #cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: var(--amber);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s ease;
+}
+
+.cursor-ring, #cursorRing {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--amber);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    transition: transform 0.15s ease-out, opacity 0.15s ease;
+}
+
+.cursor-ring.hover, #cursorRing.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0.8;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .cursor-dot, #cursor,
+    .cursor-ring, #cursorRing {
+        display: none;
+    }
+
+    body {
+        cursor: auto;
+    }
+}

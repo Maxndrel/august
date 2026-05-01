@@ -1,7 +1,9 @@
 @media (max-width: 1024px) {
+    /* Hero */
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
+        padding: 100px 30px 60px;
     }
 
     .hero-left {
@@ -12,32 +14,58 @@
         order: 1;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    .hero-tagline {
+        margin: 0 auto 30px;
     }
 
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Hide doodles on tablet */
+    .doodle {
+        display: none;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    /* Skills */
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Projects */
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Certifications */
     .certifications-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-columns {
-        grid-template-columns: 1fr;
-    }
-
+    /* Navigation */
     nav {
         padding: 16px 30px;
     }
 
     .nav-links {
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
 
     .nav-links a {
@@ -45,8 +73,17 @@
     }
 
     .btn-hire {
-        padding: 7px 16px;
+        padding: 8px 18px;
         font-size: 12px;
+    }
+
+    /* Section */
+    section {
+        padding: 80px 30px;
+    }
+
+    .watermark {
+        font-size: clamp(60px, 12vw, 120px);
     }
 }
 
@@ -57,24 +94,30 @@
 
     nav {
         padding: 12px 24px;
-        height: 52px;
-        justify-content: center;
-    }
-
-    nav .logo {
-        width: 44px;
-        height: 44px;
-        font-size: 16px;
-    }
-
-    nav.scrolled .logo {
-        width: 44px;
-        height: 44px;
-        font-size: 16px;
     }
 
     .nav-links,
     .btn-hire {
         display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
     }
 }

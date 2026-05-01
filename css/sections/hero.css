@@ -5,6 +5,8 @@
     background: var(--off-white);
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 .hero-content {
@@ -14,9 +16,11 @@
     align-items: center;
     width: 100%;
     max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding: 0 20px;
 }
 
 .hero-left {
